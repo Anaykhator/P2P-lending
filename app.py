@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template, redirect, flash, session
 from cs50 import SQL
 
+
 app = Flask(__name__)
 
 
