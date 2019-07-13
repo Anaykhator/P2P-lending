@@ -18,42 +18,33 @@ def login():
         det = request.form
         id = det['id']
         p = det['pass']
-        rows = db.execute("SELECT name FROM users where name=(?)")
-        # curr = mysql.connection.cursor()
-        # resultSet = curr.execute("SELECT * FROM login WHERE id='" + id + "'")
-        # if resultSet == 1:
-        #     ad = curr.fetchall()
-        #     if ad[0][2] == p:
-        #         if ad[0][3] == 'b':
-        #             return redirect("/borDash")
-        #         elif ad[0][3] == 'l':
-        #             return redirect("/lenDash")
-        #     else:
-        #         flash("Passwords do not match", "danger")
-        #         return redirect("/home")
         return render_template('home.html')
 
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
-    if request.method == 'POST':
-        data = request.form
-        name = data['name']
-        phone = data['phone']
-        email = data['email']
-        aadhaar = data['aadhaar']
-        pan = data['pan']
-        dob = data['dob']
-        ac = data['ac']
-        ifsc = data['ifsc']
-        userid = data['id']
-        passw = data['pass']
-        repass = data['repass']
-        type = data['mode']
-        if passw != repass:
-            return('Passwords did not match')
-        db = SQL("sqlite:///P2P.db")
-        db.execute("INSERT INTO users VALUES("+name+", "+id+", "+passw+", "+type+", "+email+", "+phone+", "+aadhaar+", "+pan+", "+dob+", "+ac+", "+ifsc+")")
+    data = request.form
+    name = data['name']
+    phone = data['phone']
+    email = data['email']
+    aadhaar = data['aadhaar']
+    pan = data['pan']
+    dob = data['dob']
+    ac = data['ac']
+    ifsc = data['ifsc']
+    userid = data['id']
+    passw = data['pass']
+    repass = data['repass']
+    type = data['mode']
+    if passw != repass:
+        return sorry("invalid username and/or password")
+    return sorry("Successful")
+        # db = SQL("sqlite:///P2P.db")
+        # db.execute("INSERT INTO users VALUES('"+name+"','"+userid+"','"+passw+"','"+type+"','"+email+"','"+phone+"','"+aadhaar+"','"+pan+"','"+dob+"','"+ac+"','"+ifsc+"')")
+
+def sorry(message):
+    flash(message)
+    return render_template("sorry.html")
 
 @app.route('/borDash', methods=['GET', 'POST'])
 def raise_req():
@@ -68,24 +59,4 @@ def raise_req():
         Ltype=str(select2)
         amt=data['amt']
         borscore=
-        borname=
-
-
-
-
-        det = request.form
-        id = det['id']
-        p = det['pass']
-        # curr = mysql.connection.cursor()
-        # resultSet = curr.execute("SELECT * FROM login WHERE id='" + id + "'")
-        # if resultSet == 1:
-        #     ad = curr.fetchall()
-        #     if ad[0][2] == p:
-        #         if ad[0][3] == 'b':
-        #             return redirect("/borDash")
-        #         elif ad[0][3] == 'l':
-        #             return redirect("/lenDash")
-        #     else:
-        #         flash("Passwords do not match", "danger")
-        #         return redirect("/home")
-        return render_template('home.html')
+        borname=s
