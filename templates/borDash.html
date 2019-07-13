@@ -6,6 +6,26 @@
 </head>
 <body>
     <h1>Welcome </h1>
+    </br>
+    <h2>Raise a request</h2>
+    <form action="raise_req" method="post" name='req'>
+      Amount:<input type="number" name="amt" placeholder="Amount"></br></br>
+      Tenure: <select name="tenure">
+                <option value="6">6</option>
+                <option value="12">12</option>
+                <option value="18">18</option>
+                <option value="24">24</option>
+                <option value="30">30</option>
+                <option value="36">36</option>
+              </select></br></br>
+      Loan Type: <select name="ltype">
+                <option value="Medical">Medical</option>
+                <option value="Business">Business</option>
+                <option value="Health">Health</option>
+                <option value="Others">Others</option>
+              </select></br></br>
+      Raise Request:  <input type="submit" value="Submit"></br></br>
+    </form>
 
 </body>
 </html>
