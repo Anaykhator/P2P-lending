@@ -4,6 +4,13 @@ from flask_mysqldb import MySQL
 app = Flask(__name__)
 mysql = MySQL(app)
 
+
 @app.route('/')
 def home():
     return render_template('home.html')
+
+
+@app.route('/login', methods = ['GET', 'POST'])
+def login():
+    if request.method == 'GET':
+        return render_template('login.html')
