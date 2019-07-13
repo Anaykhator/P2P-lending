@@ -46,3 +46,8 @@ def signup():
         userid = data['id']
         passw = data['pass']
         repass = data['repass']
+        if passw != repass:
+            return('Passwords did not match')
+        db = SQL("sqlite:///P2P.db")
+        db.execute("SELECT * FROM login WHERE username = :username", username=request.form.get("username"))
+        db.execute("INSERT INTO users VALUES("+name+", "+id+", "+")
