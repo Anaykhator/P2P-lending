@@ -18,6 +18,7 @@ def login():
         det = request.form
         id = det['id']
         p = det['pass']
+        rows = db.execute("SELECT name FROM users where name=(?)")
         # curr = mysql.connection.cursor()
         # resultSet = curr.execute("SELECT * FROM login WHERE id='" + id + "'")
         # if resultSet == 1:
@@ -69,7 +70,7 @@ def raise_req():
         borscore=
         borname=
 
-        
+
 
 
         det = request.form
