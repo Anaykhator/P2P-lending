@@ -18,6 +18,8 @@ def login():
         det = request.form
         id = det['id']
         p = det['pass']
+        rows = db.execute("SELECT name FROM users where id='{id}' and password='{p}'")
+        
         return render_template('home.html')
 
 
