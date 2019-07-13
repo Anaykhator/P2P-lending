@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="../static/style.css" type="text/css">
     <meta charset="UTF-8">
     <title>Sign Up</title>
 </head>
 <body>
-    <h1>Sign Up</h1>
     <form action="signup" method="POST">
-        Name:<input type="text" name="name"></br>
-        E-mail:<input type="email" name="mail"></br>
-        Phone No.:<input type="text" name="phone"></br>
-        Aadhar No.:<input type="text" name="aadhaar"></br>
-        PAN No.:<input type="text" name="pan"></br>
-        DOB:<input type="date" name="dob"></br>
-        Account No.:<input type="text" name="ac"></br>
-        IFSC Code:<input type="text" name="ifsc"></br>
-        User ID:<input type="text" name="id"></br>
-        Password:<input type="password" name="pass"></br>
-        Confirm Password:<input type="password" name="repass"></br>
-        Register as: <input type="radio" name="mode" value="l">Lender
-        <input type="radio" name="mode" value="b">Borrower</br>
-        <input type="submit" name="submit" value="Submit">
+        <div class="login">
+            <div class="login-screen">
+                <div class="app-title">
+                    <h1>Sign Up</h1>
+                </div>
+                <div class="login-form">
+                    <div class="control-group">
+                        <input type="text" name="name" placeholder="Name"></br>
+                        <input type="email" name="mail" placeholder="E-mail"></br>
+                        <input type="text" name="phone" placeholder="Mobile No."></br>
+                        <input type="text" name="aadhaar" placeholder="Aadhaar No."></br>
+                        <input type="text" name="pan" placeholder="PAN No."></br>
+                        <input type="date" name="dob" placeholder="DOB"></br>
+                        <input type="text" name="ac" placeholder="Account No."></br>
+                        <input type="text" name="ifsc" placeholder="IFSC Code"></br>
+                        <input type="text" name="id" placeholder="User ID"></br>
+                        <input type="password" name="pass" placeholder="Password"></br>
+                        <input type="password" name="repass" placeholder="Confirm Password "></br>
+                        Register as: </br>
+                        <input type="radio" name="mode" value="l">Lender
+                        <input type="radio" name="mode" value="b">Borrower</br>
+                        <input type="submit" name="submit" value="Submit" class="btn btn-primary btn-large btn-block">
+                    </div>
+                </div>
+            </div>
+        </div>
     </form>
 </body>
 </html>
