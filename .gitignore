@@ -25,3 +25,6 @@ __pycache__/app.cpython-37.pyc
 *.xml
 .idea/dataSources/32c0685c-9d7f-4fa9-a48e-a23d17cdbb4d.xml
 .idea/dataSources/9b0cd68a-da34-4e71-ae55-df2625da6d21.xml
+*.xml
+*.pyc
+.idea/dataSources/32c0685c-9d7f-4fa9-a48e-a23d17cdbb4d.xml
