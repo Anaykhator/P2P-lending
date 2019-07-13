@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, redirect, flash, session, g
+from flask import Flask, request, render_template, redirect, flash, session
 from flask_mysqldb import MySQL
 
 app = Flask(__name__)
