@@ -41,6 +41,7 @@ def signup():
         email = data['email']
         aadhaar = data['aadhaar']
         pan = data['pan']
+        dob = data['dob']
         ac = data['ac']
         ifsc = data['ifsc']
         userid = data['id']
@@ -50,4 +51,4 @@ def signup():
         if passw != repass:
             return('Passwords did not match')
         db = SQL("sqlite:///P2P.db")
-        db.execute("INSERT INTO users VALUES("+name+", "+id+", "+passw+", "+type+", "+email+", "+phone+", "+aadhaar+", "+pan+", "+ac+", "+ifsc+")")
+        db.execute("INSERT INTO users VALUES("+name+", "+id+", "+passw+", "+type+", "+email+", "+phone+", "+aadhaar+", "+pan+", "+dob+", "+ac+", "+ifsc+")")
